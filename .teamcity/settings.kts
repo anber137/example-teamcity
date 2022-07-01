@@ -42,9 +42,7 @@ project {
 }
 
 object Build : BuildType({
-    name = "maven build"
-
-    artifactRules = "target/*.jar => target"
+    name = "Build"
 
     vcs {
         root(DslContext.settingsRoot)
@@ -59,7 +57,6 @@ object Build : BuildType({
             }
             goals = "clean test"
             runnerArgs = "-Dmaven.test.failure.ignore=true"
-            userSettingsSelection = "settings.xml"
         }
         maven {
             name = "Deploy"
@@ -69,13 +66,11 @@ object Build : BuildType({
             }
             goals = "clean package"
             runnerArgs = "-Dmaven.test.failure.ignore=true"
-            userSettingsSelection = "settings.xml"
         }
     }
 
     triggers {
         vcs {
-            id = "TRIGGER_1"
         }
     }
 })
