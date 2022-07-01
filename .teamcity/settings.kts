@@ -41,11 +41,6 @@ project {
 }
 
 object Build : BuildType({
-    templates(MavenBuild)
-    name = "Build"
-})
-
-object Build : BuildType({
     name = "maven build"
 
     artifactRules = "target/*.jar => target"
