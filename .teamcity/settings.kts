@@ -31,13 +31,6 @@ project {
 
     buildType(Build)
 
-    template(MavenBuild)
-
-    params {
-        text("cat_name", "Wizzard", readOnly = true, allowEmpty = true)
-        param("env.cat_name", "%cat_name%")
-        param("env.name", "Alexey1")
-    }
 
     features {
         sharedResource {
@@ -49,11 +42,6 @@ project {
 }
 
 object Build : BuildType({
-    templates(MavenBuild)
-    name = "Build"
-})
-
-object MavenBuild : Template({
     name = "maven build"
 
     artifactRules = "target/*.jar => target"
