@@ -28,8 +28,8 @@ public class WelcomerTest {
 	}
 	
 	@Test
-	public void sayPhraseContainingHunter(){
-		assertThat(welcomer.sayNeedGold(), containsString("hunter"));
+	public void welcomerSaysPhraseContainingHunter(){
+		assertThat(welcomer.sayPhraseContainingHunter(), containsString("hunter"));
 	}
 
 }
