@@ -10,4 +10,6 @@ public class Welcomer{
 	public String sayNeedGold(){
 		return "Not enough gold";
 	}
+	public String sayPhraseContainingHunter() {
+		return "The bad hunter is a vegetarian";
 }

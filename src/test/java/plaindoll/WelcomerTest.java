@@ -26,4 +26,9 @@ public class WelcomerTest {
 	public void welcomerSaysSilver(){
 		assertThat(welcomer.sayNeedGold(), containsString("gold"));
 	}
+	
+	@Test
+	public void sayPhraseContainingHunter(){
+		assertThat(welcomer.sayNeedGold(), containsString("hunter"));
+
 }
