@@ -30,5 +30,6 @@ public class WelcomerTest {
 	@Test
 	public void sayPhraseContainingHunter(){
 		assertThat(welcomer.sayNeedGold(), containsString("hunter"));
+	}
 
 }
