@@ -12,4 +12,5 @@ public class Welcomer{
 	}
 	public String sayPhraseContainingHunter() {
 		return "The bad hunter is a vegetarian";
+	}
 }
